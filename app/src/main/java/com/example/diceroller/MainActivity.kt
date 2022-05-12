@@ -23,9 +23,15 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
 
+        // Create second Dice object with 20 sides and roll it
+        val dice2 = Dice(20)
+        val dice2Roll = dice2.roll()
         // Update the screen with the dice roll
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRoll.toString()
+        val resultTextView2: TextView = findViewById(R.id.textView2)
+        resultTextView2.text = dice2Roll.toString()
+
     }
 
     class Dice(private val numSides: Int) {
